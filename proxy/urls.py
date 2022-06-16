@@ -8,9 +8,3 @@ urlpatterns = [
     path('', views.get_main_page),
     path('download_page/', views.download_page, name='download_page')
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns = [
-        path('__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns
